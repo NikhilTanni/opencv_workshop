@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Getting started - image processing!</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">OPEN</span><span class="text-bold">CV</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Quick Start</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Nov 21st, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Download</h2>
+                                <div class="section-block">
+                                    <p>
+                                        we will be using these tools (or plugings), please install as is in list!
+                                        <ul>
+                                            <li>Python (version: 3.6.X)
+                                                <ul>
+                                                    <li>PIP/PIP3</li>
+                                                    <li>MatPlotLib</li>
+                                                </ul>
+                                            </li>
+                                            <li>Open CV</li>
+                                            <li>NumPy</li>
+                                        </ul>
+                                    </p>
+                                    <a href="https://www.python.org/downloads/release/python-360/" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Python</a>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Step One</h3>
+                                    <p>Install Python<br/>
+                                        follow instructions and install python 3.6.X<br/>
+                                        <b>Note</b> : make sure you check/tick "Add to path" option while installing python!
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Verify install: (open cmd prompt and enter)</h6>
+                                        <p><code>python --version</code></p>
+                                        <p><a href="https://drive.google.com/open?id=1n8zxXafjUZBPbp8u0vHDWcrH-9G-jSuW" target="_blank" title="open with christ mail ID only">#See_screenshot_here</a></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Step Two</h3>
+                                    <p><b>Install NumPy</b>
+                                    </p>
+                                    <div class="row">
+                                            <ul>
+                                                <li>Goto the website - <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy" target="_blank">Numpy (UO)</a</a></a>
+                                                <li>Download suitable version of numpy (we are using : numpy‑1.15.4+mkl‑cp36‑cp36m‑win32.whl)</li>
+                                                <li>Save it in folder like desktop or downloads</li>
+                                                <li>open cmd and type:</li>
+                                                <li><code>python C://path/to/pip.exe install C://path/to/downloaded/numpy.whl</code></li>
+                                                <li>Example: (all in one line)</li>
+                                                <li><code>python C:\python\Scripts\pip.exe install C:\Users\Nikk_PC\Downloads\numpy‑1.15.4+mkl‑cp36‑cp36m‑win32.whl</code></li>
+                                                <li></li>
+                                                <li>Verify Installation:
+                                                    <ul>
+                                                    <li>open python in cmd or IDLE</li>
+                                                    <li>Type in below</li>
+                                                    <li><code>import numpy as np</code></li>
+                                                    <li>This should not throw any error</li>
+                                                </li>
+                                            </ul>
+                                    </div><!--//row-->
+                                </div><!--//section-block-->
+                                <div id="step3"  class="section-block">
+                                    <h3 class="block-title">Step Three</h3>
+                                    <p><b>Install OpenCV</b>
+                                    <hr/>
+                                    <li>Goto this <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv" target="_blank">website</a></li>
+                                    <li>download suitable opencv whl file</li>
+                                    <li>we are using : opencv_python-3.4.3-cp36-cp36m-win_amd64.whl</li>
+                                    <li></li>
+                                    <li>same as previous installation</li>
+                                    <li>Save it in folder like desktop or downloads</li>
+                                                <li>open cmd and type:</li>
+                                                <li><code>python C://path/to/pip.exe install C://path/to/downloaded/opencv.whl</code></li>
+                                                <li>Example: (all in one line)</li>
+                                                <li><code>python C:\python\Scripts\pip.exe install C:\Users\Nikk_PC\Downloads\opencv_python-3.4.3-cp36-cp36m-win_amd64.whl</code></li>
+                                    <li></li>
+                                                <li>Verify Installation:
+                                                    <ul>
+                                                    <li>open python in cmd or IDLE</li>
+                                                    <li>Type in below</li>
+                                                    <li><code>import cv2</code></li>
+                                                    <li>This should not throw any error</li>
+                                                </li>
+                                    </p>
+                                </div><!--//section-block-->
+
+                                <div id="step4"  class="section-block">
+                                    <h3 class="block-title">Step Four</h3>
+                                    <p><b>Install Dependencies/Tools</b>
+                                    <hr/>
+                                    <li>in cmd prompt : <code>python C:/path/to/pip.exe install {tool name}</code></li>
+                                    <li>Tool Names:
+                                    <ul>
+                                        <li>matplotlib</li>
+                                        <li>--</li>
+                                    </ul>
+                                    </li>
+                                    
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Code</h2>
+                                <div class="section-block">
+                                    
+                                </div><!--//section-block-->
+                                <div id="html" class="section-block">
+                                    
+                                    <div class="code-block">
+                                        <h6>Initial code verification : </h6>
+                                        <pre><code class="language-markup">C:\Users\Nikk_PC&gt;python
+Python 3.6.7 (v3.6.7:6ec5cf24b7, Oct 20 2018, 13:35:33) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import cv2
+&gt;&gt;&gt; import matplotlib as plt
+
+#none of them must throw error
+                                        </code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="less" class="section-block">
+                                </div><!--//section-block-->
+
+
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Useful Tip:</h4>
+                                            <p>You can use <b><a href="http://jupyter.org/install" target="_blank">Jupyter Notebook</a></b> for easy coding and understanding!</p>
+                                        </div><!--//content-->
+                                    </div>
+                            </section><!--//doc-section-->
+
+                            
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                        
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#download-section">Download</a>
+	                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                        <a class="nav-link scrollto" href="#step4">Step Four</a>
+                                    </nav><!--//nav-->
+                        </div>
+                    </div><!--//doc-sidebar-->
+
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright">Image Processing workshop - FooBar 2018</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">    
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="modal-style" rel="stylesheet" href="assets/css/modal.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127384723-4"></script>
     <script>
@@ -33,18 +34,27 @@
 
 <body class="landing-page">   
 	
-	<!-- GITHUB BUTTON JS -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-     
-    <!--FACEBOOK LIKE BUTTON JAVASCRIPT SDK-->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+	<!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 styel="float:left">Note</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>You will have access to all codes and programs on the day of workshop!</p>
+          <p>meanwhile you can refer or learn snippets and understand!</p>
+          <hr/>
+          <p><b>Workshop title</b> : Image Processing using OpenCV <br/> <b>Date</b> : 22 Nov 2018 (Friday)</p>
+        </div>
+        <div class="modal-footer">
+          <h6 id="msg_show_modal"><input type="checkbox" onclick="setmodal_off()" /> Don't show this message again!</h6>
+        </div>
+      </div>
+
+    </div>
     
     <div class="page-wrapper">
         
@@ -61,20 +71,7 @@
                     <p>Workshop on Image Processing with OpenCV</p>
                     <p>Get, Set & Go!</p>
                 </div><!--//tagline-->
-                <div class="social-container">
-	                <!-- Replace with your Github Button -->
-	                <div class="github-btn mb-2">
-						<a class="github-button" href="https://github.com/xriley/PrettyDocs-Theme" data-size="large" aria-label="Star xriley/PrettyDocs-Theme on GitHub">Star</a>
-                        <a class="github-button" href="https://github.com/xriley" data-size="large" aria-label="Follow @xriley on GitHub">Follow @xriley</a>
-	                </div>
-	                <!-- Replace with your Twitter Button -->
-                    <div class="twitter-tweet">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="PrettyDocs - A FREE #Bootstrap theme for project documentations #Responsive" data-via="3rdwave_themes">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </div><!--//tweet-->
-                    <!-- Replace with your Facebook Button -->
-                    <div class="fb-like" data-href="https://themes.3rdwavemedia.com" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>            
-                 </div><!--//social-container-->
+                
             </div><!--//container-->
         </header><!--//header-->
         
@@ -84,7 +81,7 @@
                 <div class="intro">
                     <p>Welcome to the workshop. if you haven't installed all tools, begin with Quick Start link. Proceed on to components!</p>
                     <div class="cta-container">
-                        <a class="btn btn-primary btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/prettydocs-free-bootstrap-theme-for-developers-and-startups/" target="_blank"><i class="fas fa-cloud-download-alt"></i> Download Now</a>
+                        <a class="btn btn-primary btn-cta" href="javascript:void(0);" onclick="open_modal_st()"><i class="fas fa-cloud-download-alt"></i> Download ALl Codes</a>
                     </div><!--//cta-container-->
                 </div><!--//intro-->
                 <div id="cards-wrapper" class="cards-wrapper row">
@@ -128,7 +125,7 @@
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
     <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                                
     <script type="text/javascript" src="assets/js/main.js"></script>
-
+    <script type="text/javascript" src="assets/js/modal.js"></script>
 
     
 </body>

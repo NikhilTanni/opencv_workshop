@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>(OpenCV) Codes & Modules - Image Processing!</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='assets/css/googlefont.css' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="modal-style" rel="stylesheet" href="assets/css/modal.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127384723-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-127384723-4');
+    </script>
+
+    <style>
+        pre code{
+            color:white;
+        }
+    </style>
+</head> 
+
+<body class="body-pink" onload="open_modal_st()">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 styel="float:left">Note</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>You will have access to all codes and programs on the day of workshop!</p>
+          <p>meanwhile you can refer or learn snippets and understand!</p>
+          <hr/>
+          <p><b>Workshop title</b> : Image Processing using OpenCV <br/> <b>Date</b> : 22 Nov 2018 (Friday)</p>
+        </div>
+        <div class="modal-footer">
+          <h6 id="msg_show_modal"><input type="checkbox" onclick="setmodal_off()" /> Don't show this message again!</h6>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">OPEN</span><span class="text-bold">CV</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Components</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> OpenCV</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Nov 21th, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row" >
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="dashboards" class="doc-section">
+                                <h2 class="section-title">Get Started!</h2>
+                                <div class="section-block">
+                                    <p>Welcome! if you have not downloaded and installed tools, follow instructions on this <a href="./start.html">page</a>.</p>
+                                    <ul class="list list-inline">
+                                        <li class="list-inline-item"><a class="btn btn-cta btn-pink" href="./start.html" target="_blank"><i class="fas fa-external-link-alt"></i> Get Started</a></li>
+                                        <li class="list-inline-item"><a class="btn btn-cta btn-primary" href="./index.html" target="_blank"><i class="fas fa-eye"></i> Home Page </a></li>
+                                    </ul>
+                                    
+                                </div><!--//section-block-->
+                                
+                            </section><!--//doc-section-->
+                            
+                            <section id="app-components" class="doc-section">
+                                <h2 class="section-title">OpenCV</h2>
+                                <div id="projects" class="section-block">
+                                    <h3 class="block-title">OpenCV</h3>
+                                    <p>OpenCV <i>(Open Source Computer Vision Library)</i> &nbsp;&nbsp; is an open source computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer vision applications and to accelerate the use of machine perception in the commercial products. Being a BSD-licensed product, OpenCV makes it easy for businesses to utilize and modify the code.</p>
+                                    <div class="row">
+                                        <div class="">
+                                            <h6>Codes and snippets</h6>
+                                            
+                                            <ul>
+                                                <li>import statement<br/>
+                                                    <code>import cv2</code>
+                                                </li>
+                                                <br/>
+                                                <li>
+                                                    Example 1<br/>
+                                                    <pre><code>
+image = cv2.imread('strawberries.jpg')      #reads image from location
+image.shape                                 #prints dimension/size of image
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : 2160, 720
+                                                    <hr/>
+                                                </li>
+                                                <li>
+                                                    Example 2<br/>
+                                                    <pre><code>
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)      #converts BGR to RGB!
+image = cv2.resize(image, None, fx=1/3, fy=1/3)     #resize image to 1 3rd
+plt.figure(figsize=(15, 15))                        #size of output
+plt.imshow(image)                                   #to see image output
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : #image as output
+                                                    <hr/>
+
+                                                </li>
+
+                                                <li>
+                                                    Example 3<br/>
+                                                    <pre><code>
+# Show Red/Green/Blue
+    images = []
+    for i in [0, 1, 2]:
+        colour = image.copy()
+        if i != 0: colour[:,:,0] = 0
+        if i != 1: colour[:,:,1] = 0
+        if i != 2: colour[:,:,2] = 0
+        images.append(colour)
+    show(np.vstack(images))             #stack images vertically
+    #show(np.hstack(images))            #stack images horizontally
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : 
+                                                    <pre>[ 1.+0.j, 2.+0.j, 3.+0.j]</pre>
+                                                    <hr/>
+
+                                                </li>
+
+                                                <li>
+                                                    Example 4<br/>
+                                                    <pre><code>
+# using webcam
+webcam = cv2.VideoCapture(0)
+while(True):
+    ret, frame = webcam.read()      #read frame by frame
+
+    cv2.imshow('title',frame)       #show image
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):   #to make output wait
+        break 
+
+
+webcam.release()                #turn off
+cv2.destroyAllWindows()         #close all windows
+
+
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : 
+                                                    <pre>#image/video window!</pre>
+                                                    <hr/>
+
+                                                </li>
+
+                                                <li>
+                                                    Example 5<br/>
+                                                    <pre><code>
+# Flip image - image
+img = cv2.flip(image, 1, 0)
+
+# Convert to grayscale
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)      #gray scale is important for easy processing
+
+# Scale down - speed and efficiency increases
+mini = cv2.resize(gray, (int(gray.shape[1] / size), int(gray.shape[0] / size)))
+
+#you can output above to see how they look!
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : 
+                                                    <pre>#image as output</pre>
+                                                    <hr/>
+
+                                                </li>
+
+                                                <li>
+                                                    Example 6<br/>
+                                                    <pre><code>
+#importing haar files
+haar_cascade = cv2.CascadeClassifier("path/to/haar_cascade_file.xml")
+
+#example - if haar is for faces
+faces = haar_cascade.detectMultiScale(mini)     #mini is scaled down gray image (in prev example)
+
+#only if faces is not empty - atleast one face detected
+if faces:
+    #process face
+    face_i = faces[0]
+        (x, y, w, h) = [v * size for v in face_i]       get x,y coordinates and width, height of face
+
+        # Draw rectangle and write name
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 3)
+        cv2.putText(frame, "Hello Face!" , (x - 10, y - 10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
+
+
+cv2.imshow('title', frame)
+    key = cv2.waitKey(10)
+    if key == 27:               #esc key
+        break
+
+                                                    </code></pre>
+                                                    <hr/>
+                                                    Output : 
+                                                    <pre>#image with face tagged and text</pre>
+                                                    <hr/>
+
+                                                </li>
+
+                                                <li>
+                                                    More Examples...<br/>
+                                                    <pre><code>
+E.X.P.L.O.R.E.  M.O.R.E.
+                                                    </code></pre>
+                                                    <hr/>
+                                                    <hr/>
+
+                                                </li>
+        
+                                            </ul>
+                                    </div><!--//row-->
+                                </div><!--//section-block-->
+
+                            </section><!--//doc-section-->
+                            <section id="ui-components" class="doc-section">
+                                <h2 class="section-title">Other things</h2>
+                                <div class="section-block">
+                                    <p>
+                                    OpenCV is amazing tool to play with your images!<br/>
+                                    "Playing with images is nothing but playing with numbers!"<br/>
+                                    <br/>
+                                    OpenCV with NumPy can create mindblowing applications - it just that you have to logic it! So, what are you waiting for: start tuning your images and explore creative ideas!
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="">
+                                        <h6>OpenCV based Application</h6><br/>
+                                        <tt>. . . to be updated soon!</tt>
+                                            <!-- <h6>Some other things about NumPy...(consider arr is numpy array)---and figure out what these do!</h6>
+                                            <ul class="list list-unstyled">
+                                                <li><i class="fas fa-check"></i> arr[ : , : , : ] </li>
+                                                <li><i class="fas fa-check"></i> arr[ : , : , 0 ] = 20 </li>
+                                                <li><i class="fas fa-check"></i> arr[ : , 0 , : ] = 30 </li>
+                                                <li><i class="fas fa-check"></i> arr[ 0 , : , : ] = 50 </li>
+                                                <li><i class="fas fa-check"></i> img[ : , : , : 0] = 0  #red</li>
+                                                <li><i class="fas fa-check"></i> img[ : , : , : 1] = 0  #green</li>
+                                                <li><i class="fas fa-check"></i> img[ : , : , : 2] = 0  #blue</li>
+                                                <li><i class="fas fa-check"></i></li>
+                                                <li><i class="fas fa-check"></i>... And more!</li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#dashboards">Get Started</a>
+                                <a class="nav-link scrollto" href="#app-components">Components</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#projects">NumPy</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#ui-components">Explore NumPy</a>
+                            </nav><!--//doc-menu-->
+                        </div><!--//doc-nav-->
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright">Image Processing workshop - FooBar 2018</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/modal.js"></script>
+    
+</body>
+</html> 
+

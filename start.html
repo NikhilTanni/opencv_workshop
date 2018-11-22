@@ -20,10 +20,42 @@
       
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+	<link id="modal-style" rel="stylesheet" href="assets/css/modal.css">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127384723-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-127384723-4');
+    </script>
     
 </head> 
 
-<body class="body-green">
+<body class="body-green" onload="open_modal_st()">
+	
+	<!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 styel="float:left">Note</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>You will have access to all codes and programs on the day of workshop!</p>
+          <p>meanwhile you can refer or learn snippets and understand!</p>
+          <hr/>
+          <p><b>Workshop title</b> : Image Processing using OpenCV <br/> <b>Date</b> : 22 Nov 2018 (Friday)</p>
+        </div>
+        <div class="modal-footer">
+          <h6 id="msg_show_modal"><input type="checkbox" onclick="setmodal_off()" /> Don't show this message again!</h6>
+        </div>
+      </div>
+
+    </div>
     <div class="page-wrapper">
         <!-- ******Header****** -->
         <header id="header" class="header">
@@ -226,6 +258,7 @@ Type "help", "copyright", "credits" or "license" for more information.
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>      
     <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
     <script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/modal.js"></script>
     
 </body>
 </html> 

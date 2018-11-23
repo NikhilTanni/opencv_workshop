@@ -17,6 +17,10 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+function openwksp(){
+	window.location = "https://drive.google.com/open?id=1sCevj4ovLy78arvFJFR42CxP6TeQzx6h";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {

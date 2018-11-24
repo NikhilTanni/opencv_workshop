@@ -18,7 +18,7 @@ span.onclick = function() {
 }
 
 function openwksp(){
-	window.location = "https://drive.google.com/open?id=1sCevj4ovLy78arvFJFR42CxP6TeQzx6h";
+	window.location = "https://drive.google.com/open?id=1gHaEZ3Jgrux_Z-ppXQXdZGPDQE8LSN_T";
 }
 
 // When the user clicks anywhere outside of the modal, close it
